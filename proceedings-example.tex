@@ -81,9 +81,7 @@ The argument of the \verb`\author{}` command should be three lines: name, affili
 
 \section{Writing and organization}
 
-The \verb`afla` class handles basic formatting requirements such as fonts and spacing.
-
-Note that this document seems to have a concerning amount of empty space at the bottom of some pages. This is an artifact of this document having many short paragraphs of text with many examples, in short sections. In a real paper, with more prose, this will be much less of an issue.
+The \verb`afla` class handles basic formatting requirements such as fonts and spacing. Here is some advice on typesetting your AFLA paper using this class.
 
 \subsection{Emphasis}
 
@@ -103,9 +101,7 @@ Sometimes it is necessary to remove indentation, for example if a line logically
 
 \subsection{Sections and page breaks}
 
-We suggest you organize your paper into named sections. The commands \verb`\section{}`, \verb`\subsection{}`, and \verb`\subsubsection{}` are available and will be formatted appropriately.
-
-If you want to add a page break, for example to avoid a widow, use the code \verb`\pagebreak`.
+We suggest you organize your paper into named sections. The commands \verb`\section{}`, \verb`\subsection{}`, and \verb`\subsubsection{}` are available and will be formatted appropriately. If you want to add a page break, for example to avoid a widow, use the code \verb`\pagebreak`.\footnote{Note that this document seems to have plenty of empty space at the bottom of some pages. This is an artifact of this document having many short paragraphs of text with many examples, in short sections. In a real paper, with more prose, this will be much less of an issue.}
 
 \subsection{Lists}
 
@@ -133,9 +129,7 @@ Let me call attention to two major features of the AFLA Stylesheet:
 
 \subsection{Example sentences}
 
-The formatting of example sentences is perhaps the trickiest part of implementing AFLA style in \LaTeX. The Good News is that the \verb`afla` class file includes settings for the ExPex example sentence package, so that AFLA-style examples are produced. The Bad News is that ExPex syntax is a bit verbose, and there is one additional rule to follow, in (\nextx) below.\footnote{However, I should note that it is more difficult, if not impossible, to get AFLA-style examples using more common packages, such as \texttt{gb4e} or \texttt{linguex}. Trust me, I tried.}
-
-If you are unfamiliar with ExPex, the first thing to do is to look at the ExPex documentation. ExPex has support for single examples, examples with subparts, and glossed examples, as well as a variety of more advanced setups. There is just one point which must be followed:
+The formatting of example sentences is perhaps the trickiest part of implementing AFLA style in \LaTeX. The \verb`afla` class file includes settings for the very versatile ExPex linguistic examples package, so we highly recommend its use.\footnote{It is more difficult, if not impossible, to get AFLA-style examples using more common packages, such as \texttt{gb4e} or \texttt{linguex}. Trust me, I tried.} If you are unfamiliar with ExPex, the first thing to do is to look at the ExPex documentation. ExPex has support for single examples, examples with subparts, and glossed examples, as well as a variety of more advanced setups. There is just one point which must be followed:
 
 \ex \textit{The ExPex rule for AFLA Style:}\\
 	After every block of examples followed by text, add a blank line with just one character, \verb`\` . This will add the necessary extra line of space before and after the example block.\footnote{Examples are set up to have a full line of free space above, but no extra space below (except for leading). If for some reason you would like to avoid the blank line above an example, ExPex supplies the $\backslash$\texttt{ex\~} and $\backslash$\texttt{pex\~} variants for this purpose.}

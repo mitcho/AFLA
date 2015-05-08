@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{afla}[2015/05/05 AFLA 22+ Proceedings style]
-% Michael Yoshitaka Erlewine (AFLA 22)
+% Michael Yoshitaka Erlewine, May 2015
 % mitcho@mitcho.com
 
 \PassOptionsToClass{12pt}{article}
@@ -41,7 +41,7 @@
 \postauthor{\end{tabular}\par}
 \predate{\date{}}
 \postdate{\vspace*{-4pt}}
-% \maketitle automatically adds 1.5em = 18pt; we want 14pt.
+% \maketitle automatically adds 1.5em = 18pt; we want 14pt, so -4pt.
 \setlength{\thanksmarkwidth}{5pt}
 \setlength{\thanksmargin}{-\thanksmarkwidth}
 
@@ -93,10 +93,6 @@
 
 % trees
 \RequirePackage[nocenter]{qtree}
-
-% for abstract:
-%\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
-%\let\endchangemargin=\endlist
 
 \newcounter{aflanumber}
 \setcounter{aflanumber}{0}
