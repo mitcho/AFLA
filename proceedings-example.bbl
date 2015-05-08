@@ -1,0 +1,43 @@
+\begin{thebibliography}{6}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Chomsky(1977)}]{chomsky1977}
+Chomsky, Noam. 1977.
+\newblock On {\em wh}-movement.
+\newblock In {\em Formal syntax\/}, ed. Peter Culicover, Thomas Wasow, and
+  Adrian Akmajian, 71--132. New York: Academic Press.
+
+\bibitem[{Chomsky(2000)}]{chomsky2000}
+Chomsky, Noam. 2000.
+\newblock Minimalist inquiries: the framework.
+\newblock In {\em Step by step: Essays on minimalist syntax in honor of
+  {H}oward {L}asnik\/}, ed. Roger Martin, David Michaels, and Juan Uriagereka,
+  89--156. MIT Press.
+
+\bibitem[{Chomsky(2001)}]{chomsky2001}
+Chomsky, Noam. 2001.
+\newblock Derivation by phase.
+\newblock In {\em {K}en {H}ale: A life in language\/}, ed. Michael Kenstowicz.
+  MIT Press.
+
+\bibitem[{Erlewine et~al.(to appear)Erlewine, Levin, and van Urk}]{voice-afla}
+Erlewine, Michael~Yoshitaka, Theodore Levin, and Coppe van Urk. to appear.
+\newblock What makes a voice system? {O}n the relationship between voice
+  marking and case.
+\newblock In {\em Proceedings of {AFLA} 21\/}.
+
+\bibitem[{Guilfoyle et~al.(1992)Guilfoyle, Hung, and Travis}]{guilfoyle1992}
+Guilfoyle, Eithne, Henrietta Hung, and Lisa Travis. 1992.
+\newblock {S}pec of {IP} and {S}pec of {VP}: {T}wo subjects in {A}ustronesian
+  languages.
+\newblock {\em Natural Language \& Linguistic Theory\/} 10.
+
+\bibitem[{Liu(2004)}]{liu2004}
+Liu, Adlay Kun-long. 2004.
+\newblock On relativization in {S}quliq {A}tayal.
+\newblock Master's thesis, National Tsing Hua University.
+
+\end{thebibliography}

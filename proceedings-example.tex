@@ -1,0 +1,219 @@
+\documentclass{afla}
+
+% Set the AFLA meeting number here:
+\setcounter{aflanumber}{22}
+
+% loaded only for the BiBTeX logo:
+\usepackage{doc}
+
+\begin{document}
+
+\title{\MakeUppercase{An example \textit{Proceedings of AFLA} paper in LaTeX}\thanks{We thank blah blah blah. If this goes onto another line then blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah}}
+% Use MakeUppercase to uppercase your title
+
+\author{Michael Yoshitaka Erlewine\\
+	McGill University\\
+	michael.erlewine@mcgill.ca}
+%\author{Tobias Funke\\
+%	MIT Psycholinguistics\\
+%	funke@mit.edu}
+
+% No need to set \date as it won't be used
+
+\maketitle
+
+\begin{abstract}
+One of the major questions in Austronesian syntax concerns the relationship between voice marking, extraction, and case. This document will not discuss this question. Instead, it will act as an example of a paper written in \LaTeX\ for the \textit{Proceedings of AFLA}.
+\end{abstract}
+
+\section{Introduction}
+
+This sample paper describes writing a paper for the \textit{Proceedings of AFLA} using the provided \verb`afla` class. While the \verb`afla` class does much of the heavy lifting of making your paper follow the AFLA Stylesheet, it is your responsibility to ensure that the final result follows the formatting guidelines. Therefore, in addition to reading the documentation here, please familiarize yourself with the AFLA Stylesheet.
+
+\section{The preamble}
+
+To use the \verb`afla` class in your document, start the preamble with \verb`\documentclass` \verb`{afla}`. Before \verb`\begin{document}`, please set the AFLA meeting number by calling, for example, \verb`\setcounter{aflanumber}{22}`. Additional packages can be loaded in the preamble, though we suggest that the use of additional packages be limited, in order to ensure that the source will compile cleanly on the editors' computers.
+
+
+
+\section{The title block}
+
+The title block can be set up pretty straightforwardly using the \LaTeX\ \verb`\title{}` and \verb`\author{}` commands, followed by an invocation of \verb`\maketitle`.
+
+\subsection{Title}
+
+The title must be in upper case letters. This can be done by entering the title in uppercase, as in \verb`\title{MY TITLE}` or using the \verb`\MakeUppercase{}` command, as in \verb`\title{\MakeUppercase{My title}}`.
+
+If you would like to add an acknowledgement footnote, use the \verb`\thanks{}` command at the end of the title, as in the following example:
+
+\ex \tt \verb`\title{\MakeUppercase{My title}\thanks{`I would like\\
+	to thank the academy.\verb`}}`
+\xe
+\
+
+\noindent Only one such acknowledgement footnote should be used.
+
+\subsection{Author(s)}
+
+The argument of the \verb`\author{}` command should be three lines: name, affiliation, and email address, delimited by \verb`\\` for each line break. If there is only one author, use one \verb`\author{}` command, and it will be automatically centered, as in this document. If you have multiple authors, use multiple invocations of the \verb`\author` command, and it will automatically format the author block accordingly.\footnote{If your list of authors does not fit on one line, e.g.~if you have more than three authors, you may run into problems. Contact \texttt{mitcho@mitcho.com} for tips if that is the case.} For example, the code in (\nextx) below will result in the multi-author block below:
+
+\ex \verb`\author{Michael Yoshitaka Erlewine\\`\\
+	\verb`    McGill University\\`\\
+	\verb`    michael.erlewine@mcgill.ca}`\\
+	\verb`\author{Tobias Funke\\`\\
+	\verb`    MIT Psycholinguistics\\`\\
+	\verb`    funke@mit.edu}`
+\xe
+\
+
+% Hack to reset authors and create a new author block:
+% DO NOT TRY THIS AT HOME
+\makeatletter
+%\gdef\@authors\empty % code to reset \@authors
+\author{Michael Yoshitaka Erlewine\\
+	McGill University\\
+	michael.erlewine@mcgill.ca}
+\author{Tobias Funke\\
+	MIT Psycholinguistics\\
+	funke@mit.edu}
+{\@bspreauthor \@author \@bspostauthor}
+\makeatother
+
+\section{Writing and organization}
+
+The \verb`afla` class handles basic formatting requirements such as fonts and spacing.
+
+Note that this document seems to have a concerning amount of empty space at the bottom of some pages. This is an artifact of this document having many short paragraphs of text with many examples, in short sections. In a real paper, with more prose, this will be much less of an issue.
+
+\subsection{Emphasis}
+
+Remember that AFLA style dictates that \textit{italics} be used for emphasis, and only sparingly. Bold-face and underlining should not be used.
+
+\subsection{Indentation}
+
+The first paragraph in each section will not be indented, but subsequent paragraphs are automatically indented.
+
+Sometimes it is necessary to remove indentation, for example if a line logically continues a previous paragraph. This could happen after an example:
+
+\ex This is an example sentence, in the middle of a paragraph.
+\xe
+\
+
+\noindent To continue the paragraph, I added \verb`\noindent` to the beginning of this line.
+
+\subsection{Sections and page breaks}
+
+We suggest you organize your paper into named sections. The commands \verb`\section{}`, \verb`\subsection{}`, and \verb`\subsubsection{}` are available and will be formatted appropriately.
+
+If you want to add a page break, for example to avoid a widow, use the code \verb`\pagebreak`.
+
+\subsection{Lists}
+
+Let me call attention to two major features of the AFLA Stylesheet:
+
+\begin{itemize}
+\item any text that is offset from the left edge of the page should start 0.5" away from the left margin; and
+\item extra space should not be added in between text.
+\end{itemize}
+
+\noindent The default behavior of \textit{lists} in \LaTeX\ violate both of these guidelines, and therefore the \verb`afla` class has modified the \verb`enumerate` and \verb`itemize` list definitions so that they will be formatted appropriately.\footnote{Underlyingly, this uses the very flexible \texttt{enumitem} package. See the \texttt{enumitem} documentation for more information.} For example, this list:
+
+\begin{enumerate}
+\item numbered
+\item items
+\end{enumerate}
+
+\noindent is simply the result of the code in (\nextx):
+
+\ex \verb`\begin{enumerate}`\\
+	\verb`\item numbered`\\
+	\verb`\item items`\\
+	\verb`\end{enumerate}`
+\xe
+
+\subsection{Example sentences}
+
+The formatting of example sentences is perhaps the trickiest part of implementing AFLA style in \LaTeX. The Good News is that the \verb`afla` class file includes settings for the ExPex example sentence package, so that AFLA-style examples are produced. The Bad News is that ExPex syntax is a bit verbose, and there is one additional rule to follow, in (\nextx) below.\footnote{However, I should note that it is more difficult, if not impossible, to get AFLA-style examples using more common packages, such as \texttt{gb4e} or \texttt{linguex}. Trust me, I tried.}
+
+If you are unfamiliar with ExPex, the first thing to do is to look at the ExPex documentation. ExPex has support for single examples, examples with subparts, and glossed examples, as well as a variety of more advanced setups. There is just one point which must be followed:
+
+\ex \textit{The ExPex rule for AFLA Style:}\\
+	After every block of examples followed by text, add a blank line with just one character, \verb`\` . This will add the necessary extra line of space before and after the example block.\footnote{Examples are set up to have a full line of free space above, but no extra space below (except for leading). If for some reason you would like to avoid the blank line above an example, ExPex supplies the $\backslash$\texttt{ex\~} and $\backslash$\texttt{pex\~} variants for this purpose.}
+\xe
+\
+
+\noindent The result is examples that follow AFLA style: a blank line above and below every section of examples (even if it is logically in the middle of a paragraph) and no extra lines of space between adjacent examples.
+
+Here are a few examples typeset using the guidelines above. See the \LaTeX\ source file for this document to see how they were entered:
+
+\ex This is a simple example sentence.
+\xe
+\pex\textit{Glossed sub-examples with a shared title \citep[examples from][]{liu2004}:}
+\a	\begingl
+	\gla \rightcomment{\it Actor Voice (AV)}\textit{M}-aniq qulih qu' Tali'.//
+	\glb \textsc{av}-eat fish \textsc{qu} Tali//
+	\glft `Tali eats fish.'//
+	\endgl
+\a	\begingl
+	\gla \rightcomment{\it Patient Voice (PV)}Niq-\textit{un} na' Tali' qu' qulih qasa.//
+	\glb eat-\textsc{pv} \textsc{gen} Tali \textsc{qu} fish that//
+	\glft `The fish, Tali ate.'//
+	\endgl
+\xe
+\
+
+In (\lastx), the ExPex command \verb`\rightcomment{}` was used to put the AV and PV labels on the right.
+
+Here are two examples from \citealt*{voice-afla}, typeset side-by-side using \verb`multicols`. Note that the code begins with \verb`\noindent` to make sure the \verb`multicols` fills the entire width of the page.
+
+\noindent\begin{multicols}{2}
+\ex \begingl
+	\glpreamble\textit{\textit{Actor Voice (AV):}}//
+	\gla \textit{M}-aniq sehuy (qu) Yuraw.//
+	\glb \textsc{av}-eat taro \textsc{qu} Yuraw//
+	\glft `Yuraw eats taro.'//
+	\endgl
+\xe
+
+\columnbreak
+
+\ex \begingl
+	\glpreamble\textit{\textit{Patient Voice (PV):}}//
+	\gla Niq-\textit{un} \textit{na} Yuraw (qu) sehuy.//
+	\glb eat-\textsc{pv} \textit{\textsc{gen}} Yuraw \textsc{qu} taro//
+	\glft `Yuraw eats taro.'//
+	\endgl
+\xe
+\end{multicols}
+
+\subsection{Trees}
+
+The \verb`qtree` package is loaded by \verb`afla` to facilitate tree drawing. So if Yuraw ate some taro, you could build a \textit{v}P like this:
+
+\ex \Tree [.{{\em v}P} \qroof{Yuraw}.{DP} [ {\em v} [.VP [.V maniq ] \qroof{sehuy}.{DP} ] !\qsetw{0.7in} ] ]
+\xe
+\
+
+See the \verb`qtree` package documentation for more information.
+
+\section{Bibliography}
+
+We strongly recommend the use of \BibTeX\ for your bibliography needs. Specify your \verb`.bib` bibliography file path using the \verb`\bibliography` command, placed at the end of your paper. Here are some examples of citations, with AFLA Stylesheet guidelines on when to use which format:
+
+\pex \textit{AFLA-style citations:}
+	\a ``When reference is to the author(s), put the date of publication in parentheses:''\\
+		\verb`\citet{chomsky2000,chomsky2001}`: \citet{chomsky2000,chomsky2001}
+	\a ``When reference is to the work, do not put the date of publication inside (separate) parentheses:''\\
+		\verb`\citealt{chomsky1977}`: \citealt{chomsky1977}
+	\a ``If your reference to the work supplements your text, it should look like this:''\\
+		\verb`\citep*{guilfoyle1992}`: \citep*{guilfoyle1992}
+\xe
+	
+
+\section{Submitting your \LaTeX\ paper}
+
+When submitting your AFLA paper, please send the \LaTeX\ source file (\verb`.tex`), your copy of the \verb`afla.cls` file (in case you made any changes), the PDF, and any supplementary files required in order to compile the source. Supplementary files may include \verb`.bbl` bibliography files, additional \verb`.sty` package files, graphics, etc.
+
+\bibliography{proceedings-example}
+
+\end{document}
