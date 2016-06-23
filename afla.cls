@@ -33,7 +33,7 @@
 % To be honest there's no rhyme or reason to this particular droptitle;
 % I'm just trying to get it to match the output of the Word template.
 \pretitle{\parskip=0pt\par\centering\fontsize{14pt}{18pt}\selectfont}
-% We do not handle uppercasing of the title automatically, due to 
+% We do not handle uppercasing of the title automatically, due to
 % a complication with the \thanks footnote command
 \posttitle{\par\vspace*{14pt}}
 \def\authoralignment{c}
@@ -103,7 +103,7 @@
 	\fontsize{12pt}{14pt}\selectfont
 	\parskip = 0in
 	\parindent = 0.5in
-	
+
 	\pagestyle{fancy}
 	\fancyhead{}
 	\fancyfoot{}
@@ -112,8 +112,9 @@
 	\renewcommand{\footrulewidth}{0pt}
 
 	\bibsep=0pt
+	\bibhang=0.5in
 	\bibliographystyle{linquiry2}
-	
+
 	% now make sure \maketitle doesn't mess up the pagestyle:
 	\let\OriginalMaketitle\maketitle
 	\renewcommand{\maketitle}{\OriginalMaketitle\thispagestyle{fancy}}
