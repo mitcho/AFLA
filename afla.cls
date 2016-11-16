@@ -61,7 +61,7 @@
 % abstract environment
 \renewenvironment{abstract}
 {\parskip=0pt\par\centering\begin{minipage}{\linewidth - 1in}\fontsize{10}{14}\selectfont}
-{\end{minipage}\par\ignorespacesafterend\normalsize}
+{\baselineskip=12pt\end{minipage}\par\ignorespacesafterend\normalsize}
 
 % section title formatting
 \RequirePackage{titlesec}
