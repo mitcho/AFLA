@@ -19,8 +19,6 @@
 % bib
 \RequirePackage{natbib}
 \setcitestyle{aysep={}}
-% \usepackage{xspace}
-\newcommand{\cites}[2][]{\citeauthor{#2}'s\xspace#1\ (\citeyear{#2})}
 
 % fonts and symbols
 \RequirePackage{times}
