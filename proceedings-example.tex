@@ -5,12 +5,12 @@
 
 \begin{document}
 
-\title{\MakeUppercase{An example \textit{Proceedings of AFLA} paper in LaTeX}\thanks{We thank blah blah blah. If this goes onto another line then blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah}}
+\title{\MakeUppercase{An example \textit{Proceedings of AFLA} paper in LaTeX}\thanks{We thank Henrison Hsieh for debugging help and improvements to this class file. If we thank some more people and go onto another line, it looks like this.}}
 % Use MakeUppercase to uppercase your title
 
 \author{Michael Yoshitaka Erlewine\\
-	McGill University\\
-	michael.erlewine@mcgill.ca}
+	National University of Singapore\\
+	mitcho@nus.edu.sg}
 %\author{Tobias Funke\\
 %	MIT Psycholinguistics\\
 %	funke@mit.edu}
@@ -26,6 +26,8 @@ One of the major questions in Austronesian syntax concerns the relationship betw
 \section{Introduction}
 
 This sample paper describes writing a paper for the \textit{Proceedings of AFLA} using the provided \verb`afla` class. While the \verb`afla` class does much of the heavy lifting of making your paper follow the AFLA Stylesheet, it is your responsibility to ensure that the final result follows the formatting guidelines. Therefore, in addition to reading the documentation here, please familiarize yourself with the AFLA Stylesheet.
+
+The latest version of the AFLA \LaTeX\ class will always be available at\linebreak \verb`https://github.com/mitcho/afla/` .
 
 \section{The preamble}
 
@@ -55,8 +57,8 @@ If you would like to add an acknowledgement footnote, use the \verb`\thanks{}` c
 The argument of the \verb`\author{}` command should be three lines: name, affiliation, and email address, delimited by \verb`\\` for each line break. If there is only one author, use one \verb`\author{}` command, and it will be automatically centered, as in this document. If you have multiple authors, use multiple invocations of the \verb`\author` command, and it will automatically format the author block accordingly.\footnote{If your list of authors does not fit on one line, e.g.~if you have more than three authors, you may run into problems. Contact \texttt{mitcho@mitcho.com} for tips if that is the case.} For example, the code in (\nextx) below will result in the multi-author block below:
 
 \ex \verb`\author{Michael Yoshitaka Erlewine\\`\\
-	\verb`    McGill University\\`\\
-	\verb`    michael.erlewine@mcgill.ca}`\\
+	\verb`    National University of Singapore\\`\\
+	\verb`    mitcho@nus.edu.sg}`\\
 	\verb`\author{Tobias Funke\\`\\
 	\verb`    MIT Psycholinguistics\\`\\
 	\verb`    funke@mit.edu}`
