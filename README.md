@@ -7,4 +7,4 @@ This repository hosts a copy of the AFLA stylesheet, the AFLA LaTeX class, and a
 * The AFLA stylesheet here has been modified from previous versions to support the JIS B5 paper size and margins required by [Asia-Pacific Linguistics](http://pacling.anu.edu.au/), the publisher of AFLA proceedings since AFLA 21.
 * The LaTeX class and example file was created by Michael Yoshitaka Erlewine, in preparation for AFLA 22.
 
-For more information on AFLA, see the [official website](http://westernlinguistics.ca/afla/).
+For more information on AFLA, see the [official website](https://www.uwo.ca/linguistics/research/afla/index.html).
