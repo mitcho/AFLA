@@ -75,14 +75,14 @@
 \RequirePackage[flushmargin,multiple,bottom]{footmisc}
 \RequirePackage{hanging}
 \renewcommand{\footnotemargin}{0.5em}
-\newcommand{\fn}[1]{\footnote{\hangpara{-1em}{1} #1}}
+\newcommand{\fn}[1]{\footnote{\hangpara{-1em}{1}\setlength{\parindent}{0.5in} #1}}
 \long\def\symbolfootnote[#1]#2{\begingroup%
 \def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
 
 % The AFLA guidelines for example formatting is kind of tricky to accomplish, but
 % it can be done using ExPex. Here's the setup:
 \RequirePackage{expex}
-\lingset{numoffset = 0pt, aboveexskip = 14pt, belowexskip = 2pt, sampleexno=(10), textoffset=1.3em, everygla=\rm, belowglpreambleskip=-2pt, aboveglbskip=1pt, aboveglftskip=-2pt, appendtopexarg={preambleoffset=1.3em, labeloffset=0in, textoffset=0.65em, interpartskip=0pt, belowpreambleskip=0pt}}
+\lingset{numoffset = 0pt, aboveexskip = 14pt, belowexskip = 2pt, sampleexno=(10), textoffset=1.3em, everygla=\rm, belowglpreambleskip=-2pt, aboveglbskip=1pt, aboveglftskip=-2pt,glhangindent=0em, appendtopexarg={preambleoffset=1.3em, labeloffset=0in, textoffset=0.65em, interpartskip=0pt, belowpreambleskip=0pt}}
 
 % items
 \RequirePackage{enumitem}
