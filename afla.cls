@@ -97,7 +97,6 @@
 
 \AtBeginDocument{
 	\raggedbottom
-	\let\footnotesize\small
 	\fontsize{12pt}{14pt}\selectfont
 	\parskip = 0in
 	\parindent = 0.5in
