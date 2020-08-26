@@ -86,9 +86,14 @@
 
 % footnote formatting
 \RequirePackage[flushmargin,multiple,bottom]{footmisc}
-\RequirePackage{hanging}
 \renewcommand{\footnotemargin}{0.5em}
-\newcommand{\fn}[1]{\footnote{\hangpara{-1em}{1}\setlength{\parindent}{0.5in} #1}}
+% Modify paragraph indentation in footnotes. \fn{} is kept for backwards compatibility?
+\newcommand{\fn}[1]{\footnote{\setlength{\parindent}{0.5in} #1}}
+\makeatletter
+\let\@oldfntext\@makefntext
+\renewcommand{\@makefntext}[1]{\@oldfntext{\setlength{\parindent}{0.5in} #1}}
+\makeatother
+% Command for footnote with a symbol instead of a number
 \long\def\symbolfootnote[#1]#2{\begingroup%
 \def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
 
