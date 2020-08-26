@@ -7,9 +7,22 @@
 \LoadClass{article}
 
 % paper size and margins
-\RequirePackage[b5j, margin=20mm, headsep=3.3mm]{geometry}
+\DeclareOption{letterpaper}{
+\PassOptionsToPackage{letterpaper, margin=1in, headsep=8.7mm}{geometry}
+% letterpaper = US letter paper
+% headsep = 1in - 12.5mm - height of header (12pt = 4.2mm) = 8.7mm
+}
+
+\DeclareOption{b5j}{
+\PassOptionsToPackage{b5j, margin=20mm, headsep=3.3mm}{geometry}
 % b5j = JIS B5 paper
 % headsep = 20mm - 12.5mm - height of header (12pt = 4.2mm) = 3.3mm
+}
+
+\ExecuteOptions{letterpaper} % default
+\ProcessOptions\relax
+
+\RequirePackage{geometry}
 
 % formatting
 \RequirePackage{fancyhdr}

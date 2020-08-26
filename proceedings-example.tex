@@ -1,7 +1,7 @@
-\documentclass{afla}
+\documentclass[letterpaperj]{afla}
 
 % Set the AFLA meeting number here:
-\setcounter{aflanumber}{26}
+\setcounter{aflanumber}{27}
 
 \begin{document}
 
@@ -31,7 +31,9 @@ The latest version of the AFLA \LaTeX\ class will always be available at\linebre
 
 \section{The preamble}
 
-To use the \verb`afla` class in your document, start the preamble with \verb`\documentclass` \verb`{afla}`. Before \verb`\begin{document}`, please set the AFLA meeting number by calling, for example, \verb`\setcounter{aflanumber}{26}`. Additional packages can be loaded in the preamble, though we suggest that the use of additional packages be limited, in order to ensure that the source will compile cleanly on the editors' computers.
+To use the \verb`afla` class in your document, start the preamble with \verb`\documentclass` \verb`{afla}`. Two paper size options are defined: \verb`\documentclass[letterpaper]` \verb`{afla}` will use US letter paper size and \verb`\documentclass[b5j]{afla}` will use JIS B5 paper size (specified in some years for publication through \textit{Asia-Pacific Linguistics}). If no paper size option is specified, \verb`\documentclass{afla}` will default to US letter paper.
+
+Before \verb`\begin{document}`, please set the AFLA meeting number by calling, for example, \verb`\setcounter{aflanumber}{27}`. Additional packages can be loaded in the preamble, though we suggest that the use of additional packages be limited, in order to ensure that the source will compile cleanly on the editors' computers.
 
 
 
@@ -41,7 +43,7 @@ The title block can be set up pretty straightforwardly using the \LaTeX\ \verb`\
 
 \subsection{Title}
 
-The title must be in upper case letters. This can be done by entering the title in uppercase, as in \verb`\title{MY TITLE}` or using the \verb`\MakeUppercase{}` command, as in \verb`\title{\MakeUppercase{My title}}`.
+The title must be in upper case letters. This can be done by entering the title in uppercase, as in \verb`\title{MY TITLE}` or using the \verb`\MakeUppercase{}` command, as in \verb`\title{\Make` \verb`Uppercase{My title}}`.
 
 If you would like to add an acknowledgement footnote, use the \verb`\thanks{}` command at the end of the title, as in the following example:
 
@@ -100,7 +102,7 @@ Sometimes it is necessary to remove indentation, for example if a line logically
 
 \subsection{Sections and page breaks}
 
-We suggest you organize your paper into named sections. The commands \verb`\section{}`, \verb`\subsection{}`, and \verb`\subsubsection{}` are available and will be formatted appropriately. If you want to add a page break, for example to avoid a widow, use the code \verb`\pagebreak`.\footnote{Note that this document seems to have plenty of empty space at the bottom of some pages. This is an artifact of this document having many short paragraphs of text with many examples, in short sections. In a real paper, with more prose, this will be much less of an issue.}
+We suggest you organize your paper into named sections. The commands \verb`\section{}`, \linebreak \verb`\subsection{}`, and \verb`\subsubsection{}` are available and will be formatted appropriately. If you want to add a page break, for example to avoid a widow, use the code \verb`\pagebreak`.\footnote{Note that this document seems to have plenty of empty space at the bottom of some pages. This is an artifact of this document having many short paragraphs of text with many examples, in short sections. In a real paper, with more prose, this will be much less of an issue.}
 
 \subsection{Lists}
 
@@ -111,7 +113,7 @@ Let me call attention to two major features of the AFLA Stylesheet:
 \item extra space should not be added in between text.
 \end{itemize}
 
-\noindent The default behavior of \textit{lists} in \LaTeX\ violate both of these guidelines, and therefore the \verb`afla` class has modified the \verb`enumerate` and \verb`itemize` list definitions so that they will be formatted appropriately.\footnote{Underlyingly, this uses the very flexible \texttt{enumitem} package. See the \texttt{enumitem} documentation for more information.} For example, this list:
+\noindent The default behavior of \textit{lists} in \LaTeX\ violate both of these guidelines, and therefore the \verb`afla` class has modified the \verb`enumerate` and \verb`itemize` list definitions so that they will be formatted appropriately.\footnote{This uses the very flexible \texttt{enumitem} package. See the \texttt{enumitem} documentation for more information.} For example, this list:
 
 \begin{enumerate}
 \item numbered
