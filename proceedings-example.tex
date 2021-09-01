@@ -10,7 +10,7 @@
 
 \author{Michael Yoshitaka Erlewine\\
 	National University of Singapore\\
-	mitcho@nus.edu.sg}
+	mitcho@mitcho.com}
 %\author{Tobias Funke\\
 %	MIT Psycholinguistics\\
 %	funke@mit.edu}
@@ -27,11 +27,11 @@ One of the major questions in Austronesian syntax concerns the relationship betw
 
 This sample paper describes writing a paper for the \textit{Proceedings of AFLA} using the provided \verb`afla` class. While the \verb`afla` class does much of the heavy lifting of making your paper follow the AFLA Stylesheet, it is your responsibility to ensure that the final result follows the formatting guidelines. Therefore, in addition to reading the documentation here, please familiarize yourself with the AFLA Stylesheet.
 
-The latest version of the AFLA \LaTeX\ class will always be available at\linebreak \verb`https://github.com/mitcho/afla/` .
+The latest version of the AFLA \LaTeX\ class will always be available at\linebreak \verb`https://github.com/mitcho/afla/` . If you have any questions about preparing and formatting your paper, please contact your \textit{Proceedings} editors.
 
 \section{The preamble}
 
-To use the \verb`afla` class in your document, start the preamble with \verb`\documentclass{afla}`. Two paper size options are defined: \verb`\documentclass[letterpaper]{afla}` will use US letter paper size and \verb`\documentclass[b5j]{afla}` will use JIS B5 paper size (specified in some years for publication through \textit{Asia-Pacific Linguistics}). If no paper size option is specified, \verb`\documentclass{afla}` will default to US letter paper.
+To use the \verb`afla` class in your document, start the preamble with \verb`\documentclass{afla}`. Two paper size options are defined: \verb`\documentclass[letterpaper]{afla}` will use US letter paper size and \verb`\documentclass[b5j]{afla}` will use JIS B5 paper size, which has been used in some years for publication through \textit{Asia-Pacific Linguistics}. If no paper size option is specified, \verb`\documentclass{afla}` will default to US letter paper.
 
 Before \verb`\begin{document}`, please set the AFLA meeting number by calling, for example, \verb`\setcounter{aflanumber}{28}`. Additional packages can be loaded in the preamble, though we suggest that the use of additional packages be limited, in order to ensure that the source will compile cleanly on the editors' computers.
 
@@ -47,8 +47,7 @@ The title must be in upper case letters. This can be done by entering the title 
 
 If you would like to add an acknowledgement footnote, use the \verb`\thanks{}` command at the end of the title, as in the following example:
 
-\ex \tt \verb`\title{\MakeUppercase{My title}\thanks{`I would like\\
-	to thank the academy.\verb`}}`
+\ex \tt \verb`\title{\MakeUppercase{My title}\thanks{`I would like to thank\\ the Academy.\verb`}}`
 \xe
 \
 
@@ -60,7 +59,7 @@ The argument of the \verb`\author{}` command should be three lines: name, affili
 
 \ex \verb`\author{Michael Yoshitaka Erlewine\\`\\
 	\verb`    National University of Singapore\\`\\
-	\verb`    mitcho@nus.edu.sg}`\\
+	\verb`    mitcho@mitcho.com}`\\
 	\verb`\author{Tobias Funke\\`\\
 	\verb`    MIT Psycholinguistics\\`\\
 	\verb`    funke@mit.edu}`
@@ -72,8 +71,8 @@ The argument of the \verb`\author{}` command should be three lines: name, affili
 \makeatletter
 \gdef\@authors\empty
 \author{Michael Yoshitaka Erlewine\\
-	McGill University\\
-	michael.erlewine@mcgill.ca}
+	National University of Singapore\\
+	mitcho@mitcho.com}
 \author{Tobias Funke\\
 	MIT Psycholinguistics\\
 	funke@mit.edu}
@@ -134,7 +133,7 @@ The formatting of example sentences is perhaps the trickiest part of implementin
 
 \ex \textit{The ExPex rule for AFLA Style:}\\
 	After every block of examples followed by running text, add a blank line with just one character: \verb`\` . This will add the necessary extra line of space after the example block.\footnote{Examples are set up to have a full line of free space above, but no extra space below (except for leading). If you want to avoid the blank line above an example, ExPex supplies the $\backslash$\texttt{ex\~} and $\backslash$\texttt{pex\~} variants for this purpose.
-
+	
 	A footnote with multiple paragraphs will indent by half an inch.}
 \xe
 \
