@@ -2,6 +2,7 @@
 \ProvidesClass{afla}[2015/05/05 AFLA 22+ Proceedings style]
 % Michael Yoshitaka Erlewine, May 2015
 % mitcho@mitcho.com
+% LAST UPDATED: 2021/11/18
 
 \PassOptionsToClass{12pt}{article}
 \LoadClass{article}
@@ -37,6 +38,7 @@
 \RequirePackage{times}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{amsmath,amssymb}
+\RequirePackage[font=footnotesize]{caption} % 10pt font size in captions
 
 % paper title block formatting
 \RequirePackage{titling}
@@ -71,8 +73,8 @@
 
 % abstract environment
 \renewenvironment{abstract}
-{\parskip=0pt\par\centering\begin{minipage}{\linewidth - 1in}\fontsize{10}{14}\selectfont}
-{\baselineskip=12pt\end{minipage}\par\ignorespacesafterend\normalsize}
+{\parskip=0pt\par\centering\begin{minipage}{\linewidth - 1in}\fontsize{10}{12}\selectfont}
+{\end{minipage}\par\ignorespacesafterend\normalsize}
 
 % section title formatting
 \RequirePackage{titlesec}
@@ -102,7 +104,8 @@
 	\excnt=1
 	\lingset{aboveexskip = \baselineskip, belowexskip = 1pt, exnotype = roman}
 	% Other footnote formatting
-	\setlength{\parindent}{0.5in} #1
+	\setlength{\parindent}{0.5in}
+	#1
 }}
 \makeatother
 % Command for footnote with a symbol instead of a number
