@@ -133,7 +133,7 @@ The formatting of example sentences is perhaps the trickiest part of implementin
 
 \ex \textit{The ExPex rule for AFLA Style:}\\
 	After every block of examples followed by running text, add a blank line with just one character: \verb`\` . This will add the necessary extra line of space after the example block.\footnote{Examples are set up to have a full line of free space above, but no extra space below (except for leading). If you want to avoid the blank line above an example, ExPex supplies the $\backslash$\texttt{ex\~} and $\backslash$\texttt{pex\~} variants for this purpose.
-	
+
 	A footnote with multiple paragraphs will indent by half an inch.}
 \xe
 \
@@ -160,7 +160,17 @@ Here are a few examples typeset using the guidelines above. See the \LaTeX\ sour
 
 In (\lastx), the ExPex command \verb`\rightcomment{}` was used to put the AV and PV labels on the right.
 
-Here are two examples from \citealt*{voice-afla}, typeset side-by-side using \verb`multicols`. Note that the code begins with \verb`\noindent` to make sure the \verb`multicols` fills the entire width of the page.
+Here are two examples from \citealt*{voice-afla}, typeset side-by-side using \verb`multicols`. Note that the code begins with \verb`\noindent` to make sure the \verb`multicols` fills the entire width of the page.%
+\footnote{%
+	Any examples placed in footnotes will be numbered with lowercase roman numerals, resetting with every new footnote. If you are familiar with the ExPex package, please note that you should \emph{not} load the \texttt{epltxfn} package, as it interferes with the footnote formatting set in \texttt{afla.cls}.
+
+	\ex \begingl
+		\gla Isa ito=ng halimbawa ng halimbawa sa footnote.//
+		\glb one this=\textsc{lk} example \textsc{gen} example \textsc{obl} footnote//
+		\glft `This is an example of an example in a footnote.'//
+		\endgl
+	\xe
+}
 
 \noindent\begin{multicols}{2}
 \ex \begingl
