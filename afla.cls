@@ -49,8 +49,7 @@
 % We do not handle uppercasing of the title automatically, due to
 % a complication with the \thanks footnote command
 \posttitle{\par\vspace*{14pt}}
-\def\authoralignment{c}
-\preauthor{\parskip=0pt\par\centering\normalsize\begin{tabular}[t]{\authoralignment}}
+\preauthor{\parskip=0pt\par\centering\normalsize\begin{tabular}[t]{c}}
 \postauthor{\end{tabular}\par}
 \predate{\date{}}
 \postdate{\vspace*{-4pt}}
@@ -66,7 +65,7 @@
 		\gdef\@author{#1}
 	\else
 		\expandafter\gdef\expandafter\@author\expandafter{\@author\end{tabular}\begin{tabular}[t]{l}#1}
-		\gdef\authoralignment{l}
+		\preauthor{\parskip=0pt\par\centering\normalsize\begin{tabular}[t]{l}}
 	\fi
 }
 \makeatother

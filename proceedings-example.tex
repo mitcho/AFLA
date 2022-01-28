@@ -68,14 +68,10 @@ The argument of the \verb`\author{}` command should be three lines: name, affili
 
 % Hack to reset authors and create a new author block:
 % DO NOT TRY THIS AT HOME
-\makeatletter
-\gdef\@authors\empty
-\author{Michael Yoshitaka Erlewine\\
-	National University of Singapore\\
-	mitcho@mitcho.com}
 \author{Tobias Funke\\
 	MIT Psycholinguistics\\
 	funke@mit.edu}
+\makeatletter
 {\@bspreauthor \@author \@bspostauthor}
 \makeatother
 
